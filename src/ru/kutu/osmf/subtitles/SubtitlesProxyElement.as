@@ -1,6 +1,6 @@
 package ru.kutu.osmf.subtitles {
 	
-	import by.blooddy.crypto.serialization.JSON;
+	import by.blooddy.crypto.serialization.*;
 	
 	import org.osmf.elements.ProxyElement;
 	import org.osmf.events.LoadEvent;
@@ -43,7 +43,7 @@ package ru.kutu.osmf.subtitles {
 						logger.info("Start decoding subtitles settings");
 					}
 					try {
-						subtitles = JSON.decode(subtitlesSource);
+						subtitles = by.blooddy.crypto.serialization.JSON.decode(subtitlesSource);
 						CONFIG::LOGGING {
 							logger.info("Finish decoding subtitles settings");
 						}
